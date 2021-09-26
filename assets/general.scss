@@ -1,0 +1,33 @@
+/*
+1.pocicionamiento
+2.modelo de caja
+3.tipografia
+4.visuales
+5.misalaneos o otros.
+*/
+
+:root {
+    /*font of proyect*/
+    --font_tittle: 'Big Shoulders Display', cursive;
+    --font_paragraphs: 'Lexend Deca', sans-serif;
+    /*colors of proyect*/
+    //primary 
+    --Bright_orange: hsl(31, 77%, 52%);
+    --Dark_cyan: hsl(184, 100%, 22%);
+    --Very_dark_cyan: hsl(179, 100%, 13%);
+    //neutral
+    --Transparent_white_paragraphs: hsla(0, 0%, 100%, 0.75);
+    --Very_light_gray_background_headings_buttons: hsl(0, 0%, 95%);
+}
+
+html {
+    /*ajuste para uso del rem 1 rem = 10px para tamaño de fuente*/
+    font-size: 62.5%;
+}
+
+body {
+    /*ajuste de fondo , tamaño de fuente y tipo de fuente*/
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    background-color: var(--Very_light_gray_background_headings_buttons);
+}

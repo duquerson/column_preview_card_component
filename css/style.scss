@@ -1,0 +1,11 @@
+@use '../assets/general.scss';
+
+/*section de autor y diseño*/
+
+.attribution {
+    font-size: 1.1rem;
+    text-align: center;
+    a {
+        color: hsl(228, 45%, 44%);
+    }
+}
