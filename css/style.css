@@ -24,18 +24,98 @@ html {
 }
 
 body {
-  /*ajuste de fondo , tamaño de fuente y tipo de fuente*/
+  /*ajuste tamaño de fuente y box model*/
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 1.5rem;
-  background-color: var(--Very_light_gray_background_headings_buttons);
+}
+
+main {
+  /*ajuste de fondo y pocicionamiento*/
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(Very_light_gray_background_headings_buttons);
+}
+
+/*section principal card*/
+.container {
+  /*tamaño of card and font*/
+  width: 100%;
+  max-width: 16rem;
+  height: 100%;
+  max-height: 65.1rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  /*contenido individual of card*/
+}
+.container h1 {
+  margin: 0;
+  text-align: justify;
+  font-weight: 700;
+  color: var(--Very_light_gray_background_headings_buttons);
+  font-family: var(--font_tittle);
+}
+.container p,
+.container a {
+  margin: 0;
+  font-weight: 400;
+  text-align: justify;
+  text-decoration: none;
+  font-family: var(--font_paragraphs);
+}
+.container span {
+  height: 5rem;
+  width: 5rem;
+}
+.container .sedans {
+  width: inherit;
+  height: 21.7rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  background-color: var(--Bright_orange);
+}
+.container .suvs {
+  width: inherit;
+  height: 21.7rem;
+  background-color: var(--Dark_cyan);
+}
+.container .luxury {
+  width: inherit;
+  height: 21.7rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  background-color: var(--Very_dark_cyan);
 }
 
 /*section de autor y diseño*/
 .attribution {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   text-align: center;
+  font-family: var(--font_paragraphs);
 }
 .attribution a {
   color: #3e52a3;
+  -webkit-text-decoration-style: none;
+          text-decoration-style: none;
+  text-decoration: none;
+}
+.attribution a:hover {
+  cursor: pointer;
+  color: var(--Desaturated_blue);
+  opacity: 0.88;
 }
