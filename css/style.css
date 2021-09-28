@@ -28,12 +28,17 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+  background-color: var(Very_light_gray_background_headings_buttons);
 }
 
-main {
-  /*ajuste de fondo y pocicionamiento*/
-  width: 100%;
-  height: 100%;
+/*section principal card*/
+.centrar {
+  /*ajuste centrado y pocicionamiento*/
+  width: 90vw;
+  height: 90vh;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,80 +46,92 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: var(Very_light_gray_background_headings_buttons);
+  /*section de autor y diseño*/
 }
-
-/*section principal card*/
-.container {
-  /*tamaño of card and font*/
-  width: 100%;
-  max-width: 16rem;
-  height: 100%;
-  max-height: 65.1rem;
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
+.centrar .container {
+  /*tamaño of card*/
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+  grid-template-columns: repeat(1, 1fr);
+  height: 90vh;
   /*contenido individual of card*/
 }
-.container h1 {
-  margin: 0;
-  text-align: justify;
-  font-weight: 700;
-  color: var(--Very_light_gray_background_headings_buttons);
-  font-family: var(--font_tittle);
+.centrar .container .section_card {
+  height: 50rem;
+  width: 30rem;
+  padding: 4rem;
 }
-.container p,
-.container a {
-  margin: 0;
-  font-weight: 400;
-  text-align: justify;
-  text-decoration: none;
-  font-family: var(--font_paragraphs);
-}
-.container span {
-  height: 5rem;
-  width: 5rem;
-}
-.container .sedans {
-  width: inherit;
-  height: 21.7rem;
+.centrar .container .section_card:nth-child(1) {
   border-radius: 0.5rem 0.5rem 0 0;
   background-color: var(--Bright_orange);
 }
-.container .suvs {
-  width: inherit;
-  height: 21.7rem;
+.centrar .container .section_card:nth-child(2) {
   background-color: var(--Dark_cyan);
 }
-.container .luxury {
-  width: inherit;
-  height: 21.7rem;
+.centrar .container .section_card:nth-child(3) {
   border-radius: 0 0 0.5rem 0.5rem;
   background-color: var(--Very_dark_cyan);
 }
-
-/*section de autor y diseño*/
-.attribution {
-  font-size: 1.5rem;
+.centrar .container h1 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: var(--font_tittle);
+  color: var(--Very_light_gray_background_headings_buttons);
+}
+.centrar .container p {
+  font-weight: 400;
+  line-height: 1.7;
+  margin-bottom: 7rem;
+  font-family: var(--font_paragraphs);
+  color: var(--Transparent_white_paragraphs);
+}
+.centrar .container a {
+  text-align: center;
+  padding: 1.2rem 1.9rem;
+  font-weight: 400;
+  border-radius: 5rem;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0.3rem solid var(--Very_light_gray_background_headings_buttons);
+  -webkit-box-shadow: 0.1rem 0.1rem 0.5rem rgba(56, 56, 56, 0.5);
+          box-shadow: 0.1rem 0.1rem 0.5rem rgba(56, 56, 56, 0.5);
+  font-family: var(--font_paragraphs);
+  background-color: var(--Very_light_gray_background_headings_buttons);
+}
+.centrar .container .section_card:nth-child(1) > a {
+  color: var(--Bright_orange);
+}
+.centrar .container .section_card:nth-child(2) > a {
+  color: var(--Dark_cyan);
+}
+.centrar .container .section_card:nth-child(3) > a {
+  color: var(--Very_dark_cyan);
+}
+.centrar .container .section_card > a:hover {
+  background: none;
+  color: var(--Very_light_gray_background_headings_buttons);
+}
+.centrar .attribution {
   text-align: center;
   font-family: var(--font_paragraphs);
 }
-.attribution a {
+.centrar .attribution h3 {
+  font-size: 1.5rem;
+}
+.centrar .attribution a {
   color: #3e52a3;
   -webkit-text-decoration-style: none;
           text-decoration-style: none;
   text-decoration: none;
 }
-.attribution a:hover {
+.centrar .attribution a:hover {
   cursor: pointer;
   color: var(--Desaturated_blue);
   opacity: 0.88;

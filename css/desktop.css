@@ -1,0 +1,11 @@
+.container {
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  height: 100vh;
+}
+.container .section_card:nth-child(1) {
+  border-radius: 1rem 1rem 0 0;
+}
+.container .section_card:nth-child(3) {
+  border-radius: 0 0 1rem 1rem;
+}
