@@ -1,92 +1,83 @@
-    @use '../assets/general.scss';
-    /*section principal card*/
-    
-    .centrar {
-        /*ajuste centrado y pocicionamiento*/
-        width: 90vw;
-        height: 90vh;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        .container {
-            /*tamaño of card*/
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            height: 90vh;
-            /*contenido individual of card*/
-            .section_card {
-                height: 50rem;
-                width: 30rem;
-                padding: 4rem;
-            }
-            .section_card:nth-child(1) {
-                border-radius: 0.5rem 0.5rem 0 0;
-                background-color: var(--Bright_orange);
-            }
-            .section_card:nth-child(2) {
-                background-color: var(--Dark_cyan);
-            }
-            .section_card:nth-child(3) {
-                border-radius: 0 0 0.5rem 0.5rem;
-                background-color: var(--Very_dark_cyan);
-            }
-            h1 {
-                text-transform: uppercase;
-                font-weight: 700;
-                font-family: var(--font_tittle);
-                color: var(--Very_light_gray_background_headings_buttons);
-            }
-            p {
-                font-weight: 400;
-                line-height: 1.7;
-                margin-bottom: 7rem;
-                font-family: var(--font_paragraphs);
-                color: var(--Transparent_white_paragraphs);
-            }
-            a {
-                text-align: center;
-                padding: 1.2rem 1.9rem;
-                font-weight: 400;
-                border-radius: 5rem;
-                text-decoration: none;
-                cursor: pointer;
-                border: 0.3rem solid var(--Very_light_gray_background_headings_buttons);
-                box-shadow: 0.1rem 0.1rem 0.5rem rgba(56, 56, 56, 0.5);
-                font-family: var(--font_paragraphs);
-                background-color: var(--Very_light_gray_background_headings_buttons);
-            }
-            .section_card:nth-child(1)>a {
-                color: var(--Bright_orange);
-            }
-            .section_card:nth-child(2)>a {
-                color: var(--Dark_cyan);
-            }
-            .section_card:nth-child(3)>a {
-                color: var(--Very_dark_cyan);
-            }
-            .section_card>a:hover {
-                background: none;
-                color: var(--Very_light_gray_background_headings_buttons);
-            }
+@use '../assets/general.scss';
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5%;
+    .section_card {
+        width: 88%;
+        padding: 12%;
+        &:first-child {
+            border-radius: 0.5rem 0.5rem 0 0;
         }
-        /*section de autor y diseño*/
-        .attribution {
-            text-align: center;
+        &:last-child {
+            border-radius: 0 0 0.5rem 0.5rem;
+        }
+        h1 {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-family: var(--font_tittle);
+            color: var(--Very_light_gray_background_headings_buttons);
+        }
+        p {
+            font-weight: 400;
+            line-height: 1.7;
+            margin-bottom: 5rem;
             font-family: var(--font_paragraphs);
-            h3 {
-                font-size: 1.5rem;
-            }
-            a {
-                color: hsl(228, 45%, 44%);
-                text-decoration-style: none;
-                text-decoration: none;
-            }
-            a:hover {
-                cursor: pointer;
-                color: var(--Desaturated_blue);
-                opacity: 0.88;
-            }
+            color: var(--Transparent_white_paragraphs);
+        }
+        a {
+            text-align: center;
+            padding: 1.2rem 1.9rem;
+            font-weight: 400;
+            border-radius: 5rem;
+            text-decoration: none;
+            cursor: pointer;
+            border: 0.3rem solid var(--Very_light_gray_background_headings_buttons);
+            box-shadow: 0.1rem 0.1rem 0.5rem rgba(56, 56, 56, 0.5);
+            font-family: var(--font_paragraphs);
+            background-color: var(--Very_light_gray_background_headings_buttons);
         }
     }
+    .section_card:nth-child(1) {
+        background-color: var(--Bright_orange);
+    }
+    .section_card:nth-child(2) {
+        background-color: var(--Dark_cyan);
+    }
+    .section_card:nth-child(3) {
+        background-color: var(--Very_dark_cyan);
+    }
+    .section_card:nth-child(1)>a {
+        color: var(--Bright_orange);
+    }
+    .section_card:nth-child(2)>a {
+        color: var(--Dark_cyan);
+    }
+    .section_card:nth-child(3)>a {
+        color: var(--Very_dark_cyan);
+    }
+    .section_card>a:hover {
+        background: none;
+        transition: all 0.2s ease-in-out;
+        color: var(--Very_light_gray_background_headings_buttons);
+    }
+    .attribution {
+        text-align: center;
+        font-family: var(--font_paragraphs);
+        h3 {
+            font-size: 1.5rem;
+        }
+        a {
+            color: hsl(228, 45%, 44%);
+            text-decoration-style: none;
+            text-decoration: none;
+        }
+        a:hover {
+            cursor: pointer;
+            color: var(--Desaturated_blue);
+            opacity: 0.88;
+        }
+    }
+}

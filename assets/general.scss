@@ -21,13 +21,13 @@
 html {
     /*ajuste para uso del rem 1 rem = 10px para tamaño de fuente*/
     font-size: 62.5%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     /*ajuste tamaño de fuente y box model*/
-    box-sizing: border-box;
     font-size: 1.5rem;
-    margin: 0;
-    padding: 0;
-    background-color: var(Very_light_gray_background_headings_buttons);
+    background-color: var(--Very_light_gray_background_headings_buttons);
 }

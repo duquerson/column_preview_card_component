@@ -1,11 +1,19 @@
-.container {
-  -ms-grid-columns: (1fr)[3];
-  grid-template-columns: repeat(3, 1fr);
-  height: 100vh;
+.container2 {
+  display: flex;
+  min-height: 5vh;
+  width: 64.5%;
 }
-.container .section_card:nth-child(1) {
-  border-radius: 1rem 1rem 0 0;
+.container2 .section_card {
+  padding: 5rem;
 }
-.container .section_card:nth-child(3) {
-  border-radius: 0 0 1rem 1rem;
+.container2 .section_card:first-child {
+  border-radius: 0.5rem 0 0 0.5rem;
 }
+.container2 .section_card:last-child {
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+.container2 .section_card p {
+  margin-bottom: 10.4rem;
+}
+
+/*# sourceMappingURL=desktop.css.map */

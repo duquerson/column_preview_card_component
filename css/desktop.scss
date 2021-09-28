@@ -1,10 +1,17 @@
-.container {
-    grid-template-columns: repeat(3, 1fr);
-    height: 100vh;
-    .section_card:nth-child(1) {
-        border-radius: 1rem 1rem 0 0;
-    }
-    .section_card:nth-child(3) {
-        border-radius: 0 0 1rem 1rem;
+.container2 {
+    display: flex;
+    min-height: 5vh;
+    width: 64.5%;
+    .section_card {
+        padding: 5rem;
+        &:first-child {
+            border-radius: 0.5rem 0 0 0.5rem;
+        }
+        &:last-child {
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        p {
+            margin-bottom: 10.4rem;
+        }
     }
 }
